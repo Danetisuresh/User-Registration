@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 /**
- * Purpose  - As a User need to enter a password with atleast 1 upper case.
+ * Purpose  - Should have at least 1 numeric number in the password
  */
 
 public class UserRegistration {
@@ -102,6 +102,22 @@ public class UserRegistration {
 		Matcher m5 = p5.matcher(passWord1);
 		boolean r5 = m5.matches();
 		if (r5)
+			System.out.println("Password is Valid");
+		else
+			System.out.println("Password is Invalid");
+	}
+	/*
+    Created a method to enter valid Password according to rule 3
+	 */
+	public static void validPassRule3(){
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the PassWord");
+		String passWord2 = scanner.nextLine();
+		String regex6 = "^[A-Z]{1}+[a-zA-Z].+[0-9].{8,}$";
+		Pattern p6 = Pattern.compile(regex6);
+		Matcher m6 = p6.matcher(passWord2);
+		boolean r6 = m6.matches();
+		if (r6)
 			System.out.println("Password is Valid");
 		else
 			System.out.println("Password is Invalid");
