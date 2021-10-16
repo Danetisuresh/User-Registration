@@ -1,11 +1,10 @@
 package com.bridgelabz;
 import java.util.Scanner;
 /**
- * Purpose  - As a User need to enter a mobile number in a pre-defined format.
+ * Purpose  - As a User need to enter a password with minimum 8 characters
  */
 
 public class UserRegistrationMain {
-
 
 	public static void welcome(){
 		System.out.println("Welcome to User Registration System Problem");
@@ -18,6 +17,7 @@ public class UserRegistrationMain {
 		System.out.println("Enter 2 : to validate Last Name ");
 		System.out.println("Enter 3 : to validate E-mail Address ");
 		System.out.println("Enter 4 : to validate Mobile Number ");
+		System.out.println("Enter 5 : to validate Password Rule 1 ");
 		switch (scanner.nextInt()){
 		case 1:
 			UserRegistration.validFirstName();
@@ -31,9 +31,14 @@ public class UserRegistrationMain {
 		case 4:
 			UserRegistration.validMobileNumber();
 			break;
+		case 5:
+			UserRegistration.validPassRule1();
+			break;
 		default:
 			System.out.println("Select a valid number");
 		}
 	}
 
 }
+
+
