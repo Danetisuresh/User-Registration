@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 /**
- * Purpose  - As a User need to enter a valid First Name
+ * Purpose  - As a User need to enter a valid Last Name
  */
 
 public class UserRegistration {
