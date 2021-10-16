@@ -1,7 +1,7 @@
 package com.bridgelabz;
 import java.util.Scanner;
 /**
- * Purpose  - As a User need to enter a password with minimum 8 characters
+ * Purpose  - As a User need to enter a password with atleast 1 upper case.
  */
 
 public class UserRegistrationMain {
@@ -18,6 +18,7 @@ public class UserRegistrationMain {
 		System.out.println("Enter 3 : to validate E-mail Address ");
 		System.out.println("Enter 4 : to validate Mobile Number ");
 		System.out.println("Enter 5 : to validate Password Rule 1 ");
+		System.out.println("Enter 6 : to validate Password Rule 2 ");
 		switch (scanner.nextInt()){
 		case 1:
 			UserRegistration.validFirstName();
@@ -33,6 +34,9 @@ public class UserRegistrationMain {
 			break;
 		case 5:
 			UserRegistration.validPassRule1();
+			break;
+		case 6:
+			UserRegistration.validPassRule2();
 			break;
 		default:
 			System.out.println("Select a valid number");

@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 /**
- * Purpose  - As a User need to enter a password with minimum 8 characters
+ * Purpose  - As a User need to enter a password with atleast 1 upper case.
  */
 
 public class UserRegistration {
@@ -86,6 +86,22 @@ public class UserRegistration {
 		Matcher m4 = p4.matcher(passWord);
 		boolean r4 = m4.matches();
 		if (r4)
+			System.out.println("Password is Valid");
+		else
+			System.out.println("Password is Invalid");
+	}
+	/*
+    Created a method to enter valid Password according to rule 2
+	 */
+	public static void validPassRule2(){
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter the Password according to rule 2 : ");
+		String passWord1 = scanner.nextLine();
+		String regex5 = "^[A-Z]{1}+[a-zA-z0-9]{8,}$";
+		Pattern p5 = Pattern.compile(regex5);
+		Matcher m5 = p5.matcher(passWord1);
+		boolean r5 = m5.matches();
+		if (r5)
 			System.out.println("Password is Valid");
 		else
 			System.out.println("Password is Invalid");
